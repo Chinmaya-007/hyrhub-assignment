@@ -1,0 +1,38 @@
+.photo{
+    object-fit: contain;
+    width: 300px;
+}
+.card{
+    width: 60rem;
+    margin: centre auto;
+}
+:host {
+    display: block;
+    max-height: 125rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .card-row {
+    display: flex;
+    margin: auto;
+  }
+  
+  .card-col {
+    flex: 1 0 calc(50% - 1rem);
+    margin: 0 0.5rem;
+  }
+  .nb-layout{
+      display: flex;
+      
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .parent-container{
+      display: flex;
+      justify-content: center;  
+
+  }

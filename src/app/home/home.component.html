@@ -1,0 +1,71 @@
+<nb-layout >
+    <nb-layout-header><h3>Welcome</h3></nb-layout-header>
+        
+            <nb-layout-column  *ngIf="!user">
+                <div class="container">
+                    <h2>Not Signed In? </h2>
+                    
+                </div>
+                <div class="container">
+                    <button nbButton (click)="signInWithGoogle()" status="primary">Sign in with Google</button>
+                </div>
+            </nb-layout-column>
+            <nb-layout-column *ngIf="user">
+                <div class="container">
+                    <h2>Logged In</h2>
+                </div>
+                <div class="container">
+                    <nb-card>
+                        <nb-card-body>
+                      
+                          <nb-user size="giant"
+                                   name="{{user.name}}"
+                                   [showTitle]="false"
+                                   color="#cccccc">
+                          </nb-user>
+                      
+                        </nb-card-body>
+                      </nb-card>
+                </div>
+                <div class="container">
+                    <img src={{user.photoUrl}} class="card-0img-top img-responsive photo" size="small">
+                </div>
+                <div class="container">
+                    <button nbButton (click)="signOut()" status="primary">Sign Out</button>
+                </div>
+
+                
+            </nb-layout-column>
+        
+    <nb-layout-footer>Contact us</nb-layout-footer>
+</nb-layout>
+
+
+
+<!-- <div  *ngIf="!user" class="card text-center">
+    <h6 class="card-header"> simple login</h6>
+    <div class="card-block">
+        <h4 class="card-title"> Not Signed In</h4>
+        <p class="card-text">Sign In with</p>
+
+    </div>
+    <div class="card-block">
+        <button class="btn btn-social-icon btn-google mc-1" (click)="signInWithGoogle()">SignIn</button>
+
+    </div>
+</div>
+
+<div *ngIf="user" class="card text-center">
+    <h6 class="card-header"> Logged In</h6>
+    <div class="card-block">
+        <img src={{user.photoUrl}} class="card-0img-top img-responsive photo">
+        <div class="card-block">
+            <h4 class="card-title">{{user.name}}</h4>
+            <p class="card-text">{{user.email}}</p>
+        </div>
+        <div>
+            <button class="btn btn-social-icon btn-google mc-1" (click)="signOut()">Sign Out</button>
+        </div>
+
+    </div>
+</div> -->
